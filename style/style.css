@@ -11,30 +11,54 @@ body{
     min-height: 100vh;
 }
 
-header{
-    display: grid;
-    justify-content: space-evenly;
-    font-size: larger;
+header {
+    display: flex;
+    background-color: black;
+    height: 32vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+.headerflex{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+.logo h1{
+    text-decoration: none;
+    color: white;
+}
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* nav ul{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    
+ } */
+
+.menu li a{
+    list-style: none;
+    padding: 0 15px;
     
 }
 
-nav ul li {
-    list-style-type: none;
-}
-
-a{
+.menu li a{
     color: white;
     text-decoration: none;
-    padding: 20px;
+    font-weight:bold;
+    text-transform: uppercase;
 }
 
-header{
-    grid-area: header;
-}
-
-nav{
-    grid-area: nav;
-}
 .contenido{
     grid-area: contenido;
 }
@@ -47,7 +71,7 @@ footer{
     grid-area:footer;
 }
 
-.abrigo{
+/* .abrigo{
     background-color: black;
     margin-bottom: 1.5em;
     display: grid;
@@ -58,11 +82,8 @@ footer{
     "contenido"
     "galeria"
     "footer" 
-}
+} */
 
-header h1{
-    color: white;
-}
 
 .padre{
     background-color:#C4FCF0;
@@ -82,7 +103,7 @@ header h1{
 }
 
 @media (min-width:500px){
-    .abrigo{
+    .headerflex{
         display: grid;
         grid-template-areas: 
         "header header"
@@ -94,10 +115,10 @@ header h1{
 
 }
 
-nav ul{
+/* nav ul{
     display: flex;
     justify-content: flex-start;
-}
+} */
 
 @media (min-width:768px){
     .abrigo{
